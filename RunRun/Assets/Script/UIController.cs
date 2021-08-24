@@ -3,21 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
+
 
 public class UIController : MonoBehaviour
 {
-    Player player;
-    Text distanceText;
-
-    GameObject results;
-    Text finalDistanceText;
+     Player player;
+     TextMeshProUGUI distanceText;
+     GameObject results;
+     TextMeshProUGUI finalDistanceText;
 
     private void Awake()
     {
         player = GameObject.Find("Player").GetComponent<Player>();
-        distanceText = GameObject.Find("DistanceText").GetComponent<Text>();
+        distanceText = GameObject.Find("DistanceText").GetComponent<TextMeshProUGUI>();
         results = GameObject.Find("Results");
-        finalDistanceText = GameObject.Find("FinalDistanceText").GetComponent<Text>();
+        finalDistanceText = GameObject.Find("FinalDistanceText").GetComponent<TextMeshProUGUI>();
 
         results.SetActive(false);
     }
